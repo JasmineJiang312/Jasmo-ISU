@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>2d collision</title>
+        <link rel="shortcut icon" href="favicon.ico"/>
+        <style>
+            body {
+                background-color: gold;
+                text-align: center;
+                font-family: Ubuntu Mono;
+            }
+            #title {
+                color: black;
+                font-size: 200%;
+                font-style: normal;
+                margin: 1px;
+                border: 1px;
+            }
+            #balls {
+                margin-top: 5px;
+            }
+            #myCanvas {
+                margin-top: -20px;
+            }
+            section.footer {
+                color: black;
+                font-family: Ubuntu Mono;
+                font-style: normal;
+                font-size: small;
+            }
+        </style>
+    </head>
+
+    <body style="text-align: center">
+        <section>
+            <!--this is the title of the website-->
+            <div id="title"><p id="balls" style="font-size: 24pt">2D Collision</p></div>
+        </section>
+
+        <div>
+            <!--set the size of the canvas-->
+            <canvas id="myCanvas" width="900" height="500" style="border:1px solid black;"></canvas>
+
+            <br>
+                <!--the buttons that gives the mass-->
+                <input type = "button" id="balls" value= "Mass = 10" onclick= "AddnewBall10();"/>
+                <input type = "button" id="balls" value= "Mass = 15" onclick= "AddnewBall15();"/>
+                <input type = "button" id="balls" value= "Mass = 20" onclick= "AddnewBall20();"/>
+                <input type = "button" id="balls" value= "Mass = 25" onclick= "AddnewBall25();"/>
+
+                <!--the button that draws the ball with a radius that the user enters-->
+                <input type="button" id="draw" value="DRAW CIRCLE" onclick="drawCircle1();"/>
+
+                <!--let the user enter the mass or radius, velocity in both directions-->
+                <p>Please enter the mass of your disc:
+                <input type="text" id="getRadius"/>
+                <p>Please enter the velocity in the x direction:
+                <input type="text" id="getVelocityX"/>
+                <p>Please enter the velocity in the y direction:
+                <input type="text" id="getVelocityY"/><br>
+            </br>
+
+            <script src="constructors.js"></script>
+            <script src="script2.js"></script>
+            <script src="script.js"></script>
+        </div>
+
+        <!--the footer-->
+        <section class="footer">
+              Important things to know:
+              <p>Mass has to be greater than 0 and less than 50.</p>
+              <p>Velocity in the x direction has to be greater than -10 and less than 10.
+              <p>Velocity in the y direction has to be greater than -10 and less than 10.
+        <p>
+            <!--press p to pause or unpause, press r to reset-->
+            <strong>[P]</strong>: pause/unpause || <strong>[R]</strong>: [RESET]
+        </p>
+
+        </section>
+
+    </body>
+</html>
